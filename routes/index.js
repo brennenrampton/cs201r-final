@@ -44,4 +44,5 @@ router.put('/temple/:trip/addPerson', function(req, res, next) {
 	});
 });
 
+
 module.exports = router;
