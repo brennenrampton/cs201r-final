@@ -41,7 +41,7 @@ angular.module('temple', [])
         $scope.formDescription = '';
         $scope.formTemple = '';
         $scope.formMeeting = '';
-        $scope.formMax, = '';
+        $scope.formMax = '';
         $scope.formPassword = '';
         
       };
@@ -68,7 +68,7 @@ angular.module('temple', [])
         });
       };
       $scope.removeTrip = function(trip) {
-      	
+
       };
       $scope.getAll();
       

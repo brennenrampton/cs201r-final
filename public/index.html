@@ -29,7 +29,7 @@
   </form>
   <br>
   <div ng-repeat="trip in trips">
-    <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementPeople(trip)" color="blue">I want to go!</span>
+    <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementPeople(trip)" color="blue">I want to go!</span><br>
     Trip Title: {{trip.title}} <br>Date: {{trip.date}} <br>Creator: {{trip.creator}} Description: {{trip.description}} <br>Temple: {{trip.temple}} <br>Meeting Place: {{trip.meeting}} <br>Number of people attending: {{trip.attending}} <br> Max People who can attend: {{trip.max}} <br><form ng-submit="removeTrip()">Deletion Password: <input type="password" ng-model="formDelete"></input> <button type="submit">Remove Trip</button>
   </div>
 <!--</div>
