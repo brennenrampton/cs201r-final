@@ -15,7 +15,7 @@ var TripSchema = new Schema({
     password: { type: String, required: true },
 });
 
-TripSchema.pre(save, function(next) {
+TripSchema.pre('save', function(next) {
     var trip = this;
 
 // only hash the password if it has been modified (or is new)
