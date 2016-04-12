@@ -53,4 +53,4 @@ TripSchema.methods.addPerson = function(cb) {
 	this.save(cb);
 };
 
-module.exports = mongoose.model(User, UserSchema);
+module.exports = mongoose.model('Trip', TripSchema);
