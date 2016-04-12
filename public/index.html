@@ -30,7 +30,7 @@
   <br>
   <div ng-repeat="trip in trips">
     <br>
-    Trip Title: {{trip.title}} <br>Date: {{trip.date}} <br>Creator: {{trip.creator}} Description: {{trip.description}} <br>Temple: {{trip.temple}} <br>Meeting Place: {{trip.meeting}} <br>Number of people attending: {{trip.attending}} <br> Max People who can attend: {{trip.max}} <br><button onclick="incrementPeople(trip)">I want to go!!!</button><form ng-submit="removeTrip()">Deletion Password: <input type="password" ng-model="formDelete"></input> <button type="submit">Remove Trip</button></form>
+    Trip Title: {{trip.title}} <br>Date: {{trip.date}} <br>Creator: {{trip.creator}} Description: {{trip.description}} <br>Temple: {{trip.temple}} <br>Meeting Place: {{trip.meeting}} <br>Number of people attending: {{trip.attending}} <br> Max People who can attend: {{trip.max}} <br><button ng-click="incrementPeople(trip)">I want to go!!!</button><form ng-submit="removeTrip()">Deletion Password: <input type="password" ng-model="formDelete"></input> <button type="submit">Remove Trip</button></form>
   </div>
 <!--</div>
 </div>-->
