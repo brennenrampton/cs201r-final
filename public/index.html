@@ -1,2 +1,38 @@
-<DOCTYPE html>
+<html>
+<head>
+  <title>Temple Trip</title>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+  <script src="javascripts/app.js"></script>
 
+</head>
+<body ng-app="temple" ng-controller="MainCtrl">
+<!--<div class="row">
+<div class="col-md-6 col-md-offset-3">
+<div class="page-header"> -->
+<div class"jumbotron">
+  <h1>Temple Trips</h1>
+  </div>
+<!--</div>-->
+
+  <form ng-submit="addTrip()" style = "margin-top30px;">
+    Title: <input type="text" ng-model="formTitle"></input> <br>
+    Date: <input type="text" ng-model="formDate"></input> <br>
+    Creator: <input type="text" ng-model="formCreator"></input> <br>
+    Description: <input type="text" ng-model="formDescription"></input> <br><br>
+    Temple: <input type="text" ng-model="formTemple"></input> <br>
+    Meeting Place: <input type="text" ng-model="formMeeting"></input> <br>
+    Max People (set to 0 if no limit): <input type="text" ng-model="formMax"></input> <br>
+    Deletion Password: <input type="password" ng-model="formPassword"></input> <br>
+    <button type="submit">Add Trip</button>
+  </form>
+  <br>
+  <div ng-repeat="trip in trips">
+    <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementPeople(trip)" color="blue">I want to go!</span>
+    Trip Title: {{trip.title}} <br>Date: {{trip.date}} <br>Creator: {{trip.creator}} Description: {{trip.description}} <br>Temple: {{trip.temple}} <br>Meeting Place: {{trip.meeting}} <br>Number of people attending: {{trip.attending}} <br> Max People who can attend: {{trip.max}} <br><form ng-submit="removeTrip()">Deletion Password: <input type="password" ng-model="formDelete"></input> <button type="submit">Remove Trip</button>
+  </div>
+<!--</div>
+</div>-->
+</body>
+</html>
